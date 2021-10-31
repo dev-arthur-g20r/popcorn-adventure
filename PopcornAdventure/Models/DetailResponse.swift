@@ -31,7 +31,7 @@ struct Detail: Codable {
     
     /// Return if item is song or audiobook.
     var isSongOrAudiobook: Bool {
-        return kind ?? "" == "audiobook" || kind ?? "" == "song"
+        return wrapperType ?? "" == "audiobook" || kind ?? "" == "song"
     }
     
     /// Return the formatted track price when available otherwise the formatted collection price.
