@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="dateLastSeenLabel" destination="1jA-Bd-dq1" id="qz8-Md-buB"/>
                 <outlet property="listTableView" destination="8y3-Fp-wPA" id="OXP-2Y-c92"/>
+                <outlet property="noDataView" destination="4LR-mS-pvw" id="1qd-63-sOO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -63,8 +64,38 @@
             </constraints>
             <point key="canvasLocation" x="63.768115942028992" y="15.401785714285714"/>
         </view>
+        <view contentMode="scaleToFill" id="4LR-mS-pvw">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brand-icon" translatesAutoresizingMaskIntoConstraints="NO" id="TSa-Hx-opZ">
+                    <rect key="frame" x="107" y="348" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="TL2-Ah-Bpn"/>
+                        <constraint firstAttribute="width" constant="200" id="dkj-S7-JLO"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No movies, songs or audio books available. Please come back later." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owS-RQ-y9B">
+                    <rect key="frame" x="24" y="548" width="366" height="43"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Yh5-dN-zrb"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="TSa-Hx-opZ" firstAttribute="centerY" secondItem="4LR-mS-pvw" secondAttribute="centerY" id="4IN-WR-KSv"/>
+                <constraint firstItem="owS-RQ-y9B" firstAttribute="leading" secondItem="Yh5-dN-zrb" secondAttribute="leading" constant="24" id="6Gn-42-rQc"/>
+                <constraint firstItem="owS-RQ-y9B" firstAttribute="top" secondItem="TSa-Hx-opZ" secondAttribute="bottom" id="8jq-rA-dJV"/>
+                <constraint firstItem="Yh5-dN-zrb" firstAttribute="trailing" secondItem="owS-RQ-y9B" secondAttribute="trailing" constant="24" id="oLZ-Vk-Cdr"/>
+                <constraint firstItem="TSa-Hx-opZ" firstAttribute="centerX" secondItem="4LR-mS-pvw" secondAttribute="centerX" id="tIK-v9-rSS"/>
+            </constraints>
+            <point key="canvasLocation" x="957" y="39"/>
+        </view>
     </objects>
     <resources>
+        <image name="brand-icon" width="341.5" height="341.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -9,6 +9,7 @@ import Foundation
 import Alamofire
 
 class DetailService {
+    
     /// Get details from API, decode to the `DetailResponse` struct. Return a callback if successful, `DetailResponse` struct containing the results. Otherwise an `Error`. Used Alamofire since it has built in classes for responses containing `result` wherein you'll just check if either `success` or `failure`.
     func getDetails(completion: @escaping (DetailResponse?,Error?)->()) {
         let url = Constants.shared.baseURL
@@ -32,4 +33,5 @@ class DetailService {
             }
         }
     }
+    
 }

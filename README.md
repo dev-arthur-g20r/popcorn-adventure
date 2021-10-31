@@ -5,7 +5,7 @@ This is an iOS app developed by Arthur Tristan M. Ramos who has taken the Appeti
 The design pattern the proponent has used in the project is **Model View Controller (MVC)**, the most well known design pattern in software development. It contains three components: *model*, *view* and *controller*.
 
 # Model
-Model is the component that handles the data wherein as seen in the code, we use a **struct** which is the structure of the data to be displayed in the view then manipulated by the controller once the user interacts with the application. In the struct itself, for the developer to gather some data easily, *functions* are created like **getPrice()** (Gets the *track price* if available, otherwise, the *collection price*).
+Model is the component that handles the data wherein as seen in the code, we use a **struct** which is the structure of the data to be displayed in the view then manipulated by the controller once the user interacts with the application. In the struct itself, for the developer to gather some data easily, *functions* are created like `getPrice()` (Gets the *track price* if available, otherwise, the *collection price*).
 
 # View
 View is the aesthetic part of the application that displays the data for the user. It contains the **XiB (Interface Builder)** that holds the components where the data is stored and is used to indicate actions of specific components like the *arrow* pointed to the right in each item of movie, song or audio book given in the project indicating that when you tap the media (e.g. "Stay" by Rihanna), it will lead you to a page that will give more information about the song.
@@ -36,13 +36,20 @@ The proponent frequently uses extensions not only to add functionality in existi
 # Functions in Models
 Functions return a value. The proponent frequently uses functions in models since the properties and functions in one struct technically are connected to one another. The proponent creates functions for the developer to easily get the data without extra procedures after gathering the data. One biggest example is the `getPrice()` in the 	`Detail` model.
 
+# Why Frequent use of Stack Views?
+The proponent frequently uses *Stack Views* because it is a component that automatically adjusts spaces between elements inside it wherein developer will just choose the **Fill Equally** *distribution* and provide the **spacing** between the items inside.
+
 # Screenshots of Views
 
 ## List View
 ![List View](https://github.com/dev-arthur-g20r/popcorn-adventure/blob/main/Screenshots/List%20View.png)
 
+This is the view where user sees the list of movies, songs or audio books available for him/her to view. We have used here **UITableView** which is the UI component for *table view*, a view component that uses the concepts of *DataSource* and *Delegate* for us to reuse cells that we only edit using one set of functions. 
+
 ## Details View
 ![Details View](https://github.com/dev-arthur-g20r/popcorn-adventure/blob/main/Screenshots/Detail%20View.png)
+
+This is the view that displays the detail about the movie, song or audio book that he/she selected from the **List view**. In the list view, we just pass the selected *detail* from `didSelectRowAt` in its *table view* to avoid another network call since our struct is reusable.
 
 
 	

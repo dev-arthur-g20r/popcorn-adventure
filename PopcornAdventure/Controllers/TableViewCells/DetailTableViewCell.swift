@@ -14,6 +14,7 @@ class DetailTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,6 +30,7 @@ class DetailTableViewCell: UITableViewCell {
 
 // MARK: - Reusable functions for the cell
 extension DetailTableViewCell {
+    
     /// Display the details using the `Detail` struct. Use `SDWebImage` for displaying images and utilize its caching service along with its easier `placeholderImage` when image URL is not available.
     func displayDetails(of data: Detail?) {
         let imageURL = URL(string: data?.artworkUrl100 ?? "")
@@ -38,4 +40,5 @@ extension DetailTableViewCell {
         priceLabel.text = data?.getTrackPrice()
         self.accessoryType = .disclosureIndicator
     }
+    
 }

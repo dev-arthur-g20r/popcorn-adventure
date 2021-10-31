@@ -50,7 +50,7 @@ class DetailViewController: UIViewController {
 
 }
 
-// MARK: Configure views
+// MARK: - Configure views
 extension DetailViewController {
     /// Set up navigation title displaying kind or wrapper type. Make the tint color of left bar button white when in Dark mode. Otherwise, black.
     private func setupNavigationBar() {

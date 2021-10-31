@@ -9,9 +9,12 @@ import UIKit
 
 class ListViewController: UIViewController {
 
+    @IBOutlet var noDataView: UIView!
+    
     @IBOutlet weak var listTableView: UITableView!
     
     @IBOutlet weak var dateLastSeenLabel: UILabel!
+    
     let detailCellId = "DetailTableViewCell"
     
     var detailsService = DetailService()
@@ -41,18 +44,22 @@ class ListViewController: UIViewController {
 
 // MARK: - Service calls
 extension ListViewController {
+    
     /// Set up details fetched from API to assign it to the details array then reload table view to apply the data in the table view.
     private func getDetails() {
         detailsService.getDetails { data, error in
             DispatchQueue.main.async {
                 guard let data = data else { return }
                 self.details = data.results ?? []
-                /// Still need to learn grouping of arrays so sorted the array instead based on `kind`.
+                
+                /// Still need to learn in the future grouping of arrays so just sorted the array instead based on `kind` starting from A to Z.
                 self.details = self.details.sorted { $0.kind ?? "" < $1.kind ?? "" }
+                
                 self.listTableView.reloadData()
             }
         }
     }
+    
 }
 
 
@@ -74,6 +81,8 @@ extension ListViewController {
         listTableView.dataSource = self
         listTableView.delegate = self
         listTableView.register(UINib(nibName: detailCellId, bundle: nil), forCellReuseIdentifier: detailCellId)
+        listTableView.backgroundView = noDataView
+        listTableView.tableFooterView = UIView()
         listTableView.reloadData()
     }
 }
@@ -98,7 +107,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
         return Constants.shared.tableViewHeight.toCGFloat()
     }
     
-    /// Selecting an item, go to `DetailsViewController` to display more details about the movie, song or audiobook.
+    /// Selecting an item, go to `DetailsViewController` to display more details about the movie, song or audiobook. For reusability, pass the `details`.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detail = details[indexPath.row]
         let detailVC = DetailViewController()
@@ -107,4 +116,5 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
         navigationController.modalPresentationStyle = .fullScreen
         self.present(navigationController, animated: true, completion: nil)
     }
+    
 }
