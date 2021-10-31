@@ -41,6 +41,7 @@ Functions return a value. The proponent frequently uses functions in models sinc
 ## List View
 ![List View](https://github.com/dev-arthur-g20r/popcorn-adventure/blob/main/Screenshots/List%20View.png)
 
+## Details View
 ![Details View](https://github.com/dev-arthur-g20r/popcorn-adventure/blob/main/Screenshots/Detail%20View.png)
 
 
