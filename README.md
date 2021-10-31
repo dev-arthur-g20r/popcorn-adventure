@@ -49,7 +49,7 @@ This is the view where user sees the list of movies, songs or audio books availa
 ## Details View
 ![Details View](https://github.com/dev-arthur-g20r/popcorn-adventure/blob/main/Screenshots/Detail%20View.png)
 
-This is the view that displays the detail about the movie, song or audio book that he/she selected from the **List view**. In the list view, we just pass the selected *detail* from `didSelectRowAt` in its *table view* to avoid another network call since our struct is reusable.
+This is the view that displays the detail about the movie, song or audio book that he/she selected from the **List view**. In the list view, we just pass the selected *detail* from `didSelectRowAt` in its *table view* to avoid another network call since our `Detail` struct is reusable.
 
 
 	
