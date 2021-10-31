@@ -35,8 +35,6 @@ class DetailViewController: UIViewController {
     
     override func viewWillLayoutSubviews(){
         super.viewWillLayoutSubviews()
-        print("Scroll View Content Size: \(scrollView.contentSize)")
-        view.layoutIfNeeded()
     }
 
 
@@ -64,8 +62,10 @@ extension DetailViewController {
     /// Display available data based on the detail selected from the list
     private func displayData() {
         let imageURL = URL(string: detail?.artworkUrl100 ?? "")
+        let isSongOrAudiobook = detail?.isSongOrAudiobook ?? false
         bigPosterImageView.sd_setImage(with: imageURL, placeholderImage: Constants.shared.placeholderImage)
-        posterHeightConstraint.constant = detail?.kind == "song" || detail?.wrapperType == "audiobook" ? 200 : 300
+        posterHeightConstraint.constant = isSongOrAudiobook ? 200 : 300
+        posterWidthConstraint.constant = isSongOrAudiobook ? 200 : 250
         titleLabel.text = detail?.getTitle() ?? ""
         artistLabel.text = detail?.artistName ?? "Anonymous"
         priceLabel.text = detail?.getTrackPrice() ?? ""

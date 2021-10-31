@@ -29,6 +29,11 @@ struct Detail: Codable {
     let description: String?
     let longDescription: String?
     
+    /// Return if item is song or audiobook.
+    var isSongOrAudiobook: Bool {
+        return kind ?? "" == "audiobook" || kind ?? "" == "song"
+    }
+    
     /// Return the formatted track price when available otherwise the formatted collection price.
     func getTrackPrice() -> String {
         return trackPrice == nil ? collectionPrice?.getPrice() ?? "$0.00" : trackPrice?.getPrice() ?? "$0.00"
@@ -49,6 +54,4 @@ struct Detail: Codable {
     func getNavigationTitle() -> String {
         return kind == nil ? wrapperType?.cleanCategoryFormat ?? "" : kind?.cleanCategoryFormat ?? ""
     }
-    
-    
 }
