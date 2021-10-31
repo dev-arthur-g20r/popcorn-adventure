@@ -1,4 +1,4 @@
-﻿# Popcorn Adventure
+# Popcorn Adventure
 This is an iOS app developed by Arthur Tristan M. Ramos who has taken the Appetiser iOS Coding Challenge.
 
 # Design Pattern
@@ -35,6 +35,13 @@ The proponent frequently uses extensions not only to add functionality in existi
 
 # Functions in Models
 Functions return a value. The proponent frequently uses functions in models since the properties and functions in one struct technically are connected to one another. The proponent creates functions for the developer to easily get the data without extra procedures after gathering the data. One biggest example is the `getPrice()` in the 	`Detail` model.
+
+# Screenshots of Views
+
+## List View
+![List View](https://github.com/dev-arthur-g20r/popcorn-adventure/blob/main/Screenshots/List%20View.png)
+
+![Details View](https://github.com/dev-arthur-g20r/popcorn-adventure/blob/main/Screenshots/Detail%20View.png)
 
 
 	
