@@ -1,0 +1,6 @@
+framework module Pods_PopcornAdventure {
+  umbrella header "Pods-PopcornAdventure-umbrella.h"
+
+  export *
+  module * { export * }
+}
