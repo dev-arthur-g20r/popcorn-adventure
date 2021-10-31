@@ -72,7 +72,7 @@ extension DetailViewController {
         genreLabel.text = detail?.primaryGenreName ?? "No genres available."
         longDescriptionLabel.text = detail?.getDescription() ?? "No description available."
         scrollViewHeightConstraint.constant += (detail?.getDescription().count ?? 0).toCGFloat()
-        scrollViewHeightConstraint.constant /= 2
+        scrollViewHeightConstraint.constant /= 1.8
     }
 }
 
