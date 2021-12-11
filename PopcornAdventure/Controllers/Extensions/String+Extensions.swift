@@ -2,7 +2,7 @@
 //  String+Extensions.swift
 //  PopcornAdventure
 //
-//  Created by EasyPOS iOS Dev on 10/31/21.
+//  Created by Arthur Tristan M. Ramos on 10/31/21.
 //
 
 import Foundation

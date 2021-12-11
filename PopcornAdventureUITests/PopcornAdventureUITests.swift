@@ -2,7 +2,7 @@
 //  PopcornAdventureUITests.swift
 //  PopcornAdventureUITests
 //
-//  Created by EasyPOS iOS Dev on 10/30/21.
+//  Created by Arthur Tristan M. Ramos on 10/30/21.
 //
 
 import XCTest

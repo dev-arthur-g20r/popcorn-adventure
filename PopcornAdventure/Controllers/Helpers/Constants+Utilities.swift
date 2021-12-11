@@ -2,7 +2,7 @@
 //  Constants.swift
 //  PopcornAdventure
 //
-//  Created by EasyPOS iOS Dev on 10/30/21.
+//  Created by Arthur Tristan M. Ramosv on 10/30/21.
 //
 
 import UIKit
